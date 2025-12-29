@@ -77,6 +77,18 @@
 ![系统设置 - 通用配置](docs/images/settings-dark.png)
 ````
 
+### 💡 使用案例 (Usage Examples)
+
+````carousel
+![Claude Code 联网搜索 - 结构化来源与引文显示](docs/images/usage/claude-code-search.png)
+<!-- slide -->
+![Cherry Studio 深度集成 - 原生回显搜索引文与来源链接](docs/images/usage/cherry-studio-citations.png)
+<!-- slide -->
+![Imagen 3 高级绘图 - 完美还原 Prompt 意境与细节](docs/images/usage/image-gen-nebula.png)
+<!-- slide -->
+![Kilo Code 接入 - 多账号极速轮换与模型穿透](docs/images/usage/kilo-code-integration.png)
+````
+
 ## 🏗️ 技术架构 (Architecture)
 
 ```mermaid

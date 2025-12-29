@@ -78,6 +78,18 @@ By leveraging this app, you can transform common Web Sessions (Google/Anthropic)
 ![Settings - General Config](docs/images/settings-dark.png)
 ````
 
+### 💡 Usage Examples
+
+````carousel
+![Claude Code Web Search - Structured source and citation display](docs/images/usage/claude-code-search.png)
+<!-- slide -->
+![Cherry Studio Deep Integration - Native echo of search citations and source links](docs/images/usage/cherry-studio-citations.png)
+<!-- slide -->
+![Imagen 3 Advanced Drawing - Perfect restoration of Prompt artistic conception and details](docs/images/usage/image-gen-nebula.png)
+<!-- slide -->
+![Kilo Code Integration - Multi-account high-speed rotation and model penetration](docs/images/usage/kilo-code-integration.png)
+````
+
 ## 🏗️ Architecture
 
 ```mermaid
