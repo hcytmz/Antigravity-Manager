@@ -110,6 +110,7 @@
         "reset_time": "Reset Time",
         "switch_to": "Switch to this account",
         "actions": "Actions",
+        "device_fingerprint": "Device Fingerprint",
         "details": {
             "title": "Quota Details"
         },
@@ -212,7 +213,14 @@
             "auto_launch": "Launch at Startup",
             "auto_launch_enabled": "Enabled",
             "auto_launch_disabled": "Disabled",
-            "auto_launch_desc": "Automatically launch Antigravity Tools when system starts"
+            "auto_launch_desc": "Automatically launch Antigravity Tools when system starts",
+            "auto_check_update": "Auto Check for Updates",
+            "auto_check_update_desc": "Automatically check for new versions on startup",
+            "auto_check_update_enabled": "Auto check enabled",
+            "auto_check_update_disabled": "Auto check disabled",
+            "update_check_interval": "Check Interval (hours)",
+            "update_check_interval_desc": "Set auto-check interval (1-168 hours)",
+            "update_check_interval_saved": "Check interval settings saved"
         },
         "account": {
             "title": "Account Settings",

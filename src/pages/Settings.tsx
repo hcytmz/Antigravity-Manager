@@ -288,7 +288,7 @@ function Settings() {
                                         try {
                                             await invoke('toggle_auto_launch', { enable: enabled });
                                             setFormData({ ...formData, auto_launch: enabled });
-                                            showToast(enabled ? '已启用开机自动启动' : '已禁用开机自动启动', 'success');
+                                            showToast(enabled ? t('settings.general.auto_launch_enabled') : t('settings.general.auto_launch_disabled'), 'success');
                                         } catch (error) {
                                             showToast(`${t('common.error')}: ${error}`, 'error');
                                         }
@@ -303,8 +303,8 @@ function Settings() {
                             {/* 自动检查更新 */}
                             <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-base-200 rounded-lg border border-gray-100 dark:border-base-300">
                                 <div>
-                                    <div className="font-medium text-gray-900 dark:text-base-content">自动检查更新</div>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">启动时自动检查新版本</p>
+                                    <div className="font-medium text-gray-900 dark:text-base-content">{t('settings.general.auto_check_update')}</div>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{t('settings.general.auto_check_update_desc')}</p>
                                 </div>
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input
@@ -322,7 +322,7 @@ function Settings() {
                                                     }
                                                 });
                                                 setFormData({ ...formData, auto_check_update: enabled });
-                                                showToast(enabled ? '已启用自动检查更新' : '已禁用自动检查更新', 'success');
+                                                showToast(enabled ? t('settings.general.auto_check_update_enabled') : t('settings.general.auto_check_update_disabled'), 'success');
                                             } catch (error) {
                                                 showToast(`${t('common.error')}: ${error}`, 'error');
                                             }
@@ -335,7 +335,7 @@ function Settings() {
                             {/* 检查间隔 */}
                             {formData.auto_check_update && (
                                 <div className="ml-4">
-                                    <label className="block text-sm font-medium text-gray-900 dark:text-base-content mb-2">检查间隔（小时）</label>
+                                    <label className="block text-sm font-medium text-gray-900 dark:text-base-content mb-2">{t('settings.general.update_check_interval')}</label>
                                     <input
                                         type="number"
                                         className="w-32 px-4 py-4 border border-gray-200 dark:border-base-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-base-content bg-gray-50 dark:bg-base-200"
@@ -352,13 +352,13 @@ function Settings() {
                                                         check_interval_hours: formData.update_check_interval ?? 24
                                                     }
                                                 });
-                                                showToast('已保存检查间隔设置', 'success');
+                                                showToast(t('settings.general.update_check_interval_saved'), 'success');
                                             } catch (error) {
                                                 showToast(`${t('common.error')}: ${error}`, 'error');
                                             }
                                         }}
                                     />
-                                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">设置自动检查更新的时间间隔（1-168 小时）</p>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">{t('settings.general.update_check_interval_desc')}</p>
                                 </div>
                             )}
                         </div>

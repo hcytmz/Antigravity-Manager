@@ -110,6 +110,7 @@
         "reset_time": "重置时间",
         "switch_to": "切换到此账号",
         "actions": "操作",
+        "device_fingerprint": "设备指纹",
         "details": {
             "title": "配额详情"
         },
@@ -212,7 +213,14 @@
             "auto_launch": "开机自动启动",
             "auto_launch_enabled": "启用",
             "auto_launch_disabled": "禁用",
-            "auto_launch_desc": "系统启动时自动运行 Antigravity Tools"
+            "auto_launch_desc": "系统启动时自动运行 Antigravity Tools",
+            "auto_check_update": "自动检查更新",
+            "auto_check_update_desc": "启动时自动检查新版本",
+            "auto_check_update_enabled": "已启用自动检查更新",
+            "auto_check_update_disabled": "已禁用自动检查更新",
+            "update_check_interval": "检查间隔(小时)",
+            "update_check_interval_desc": "设置自动检查更新的时间间隔(1-168 小时)",
+            "update_check_interval_saved": "已保存检查间隔设置"
         },
         "account": {
             "title": "账号设置",
