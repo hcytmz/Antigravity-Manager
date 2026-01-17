@@ -221,50 +221,52 @@ export const CliSyncCard = ({ proxyUrl, apiKey, className }: CliSyncCardProps) =
                 </div>
 
                 <div className="mt-auto space-y-3">
-                    <div className="p-2.5 bg-gray-50/80 dark:bg-gray-900/40 rounded-lg border border-dashed border-gray-200 dark:border-white/10 relative group/url">
+                    <div className="p-2.5 bg-gray-50/80 dark:bg-gray-900/40 rounded-lg border border-dashed border-gray-200 dark:border-white/10">
                         <div className="flex justify-between items-start mb-1">
                             <div className="text-[9px] text-gray-400 dark:text-gray-500 uppercase font-bold tracking-wider">{t('proxy.cli_sync.status.current_base_url')}</div>
-                            {status?.installed && (
-                                <div className="flex gap-1 opacity-0 group-hover/url:opacity-100 transition-opacity">
-                                    <button
-                                        onClick={() => handleViewConfig(app)}
-                                        className="p-0.5 hover:text-blue-500 transition-colors"
-                                        title={t('proxy.cli_sync.btn_view')}
-                                    >
-                                        <Eye size={12} />
-                                    </button>
-                                    <button
-                                        onClick={() => handleRestore(app)}
-                                        className="p-0.5 hover:text-orange-500 transition-colors"
-                                        title={status.has_backup ? t('proxy.cli_sync.btn_restore_backup') : t('proxy.cli_sync.btn_restore')}
-                                    >
-                                        <RotateCcw size={12} />
-                                    </button>
-                                </div>
-                            )}
                         </div>
                         <div className="text-[10px] font-mono truncate text-gray-500 dark:text-gray-400 italic">
                             {status?.current_base_url || '---'}
                         </div>
                     </div>
 
-                    <button
-                        onClick={() => handleSync(app)}
-                        disabled={!status?.installed || isAppSyncing || isAppLoading}
-                        className={cn(
-                            "btn btn-sm w-full gap-2 rounded-xl transition-all font-bold shadow-sm",
-                            status?.is_synced
-                                ? "btn-ghost border-gray-200 dark:border-base-400 text-gray-500 hover:bg-gray-100"
-                                : "btn-primary hover:shadow-lg shadow-blue-500/20"
+                    <div className="flex items-center gap-2">
+                        {status?.installed && (
+                            <>
+                                <button
+                                    onClick={() => handleViewConfig(app)}
+                                    className="btn btn-sm btn-square btn-ghost border border-gray-200 dark:border-white/10 text-gray-500 hover:text-blue-500 hover:bg-white dark:hover:bg-gray-700"
+                                    title={t('proxy.cli_sync.btn_view')}
+                                >
+                                    <Eye size={16} />
+                                </button>
+                                <button
+                                    onClick={() => handleRestore(app)}
+                                    className="btn btn-sm btn-square btn-ghost border border-gray-200 dark:border-white/10 text-gray-500 hover:text-orange-500 hover:bg-white dark:hover:bg-gray-700"
+                                    title={status.has_backup ? t('proxy.cli_sync.btn_restore_backup') : t('proxy.cli_sync.btn_restore')}
+                                >
+                                    <RotateCcw size={16} />
+                                </button>
+                            </>
                         )}
-                    >
-                        {isAppSyncing ? (
-                            <Loader2 size={14} className="animate-spin" />
-                        ) : (
-                            <RefreshCw size={14} className={cn(isAppLoading && "animate-spin-once")} />
-                        )}
-                        {t('proxy.cli_sync.btn_sync')}
-                    </button>
+                        <button
+                            onClick={() => handleSync(app)}
+                            disabled={!status?.installed || isAppSyncing || isAppLoading}
+                            className={cn(
+                                "btn btn-sm flex-1 gap-2 rounded-xl transition-all font-bold shadow-sm",
+                                status?.is_synced
+                                    ? "btn-ghost border-gray-200 dark:border-base-400 text-gray-500 hover:bg-gray-100"
+                                    : "btn-primary hover:shadow-lg shadow-blue-500/20"
+                            )}
+                        >
+                            {isAppSyncing ? (
+                                <Loader2 size={14} className="animate-spin" />
+                            ) : (
+                                <RefreshCw size={14} className={cn(isAppLoading && "animate-spin-once")} />
+                            )}
+                            {t('proxy.cli_sync.btn_sync')}
+                        </button>
+                    </div>
                 </div>
             </div>
         );

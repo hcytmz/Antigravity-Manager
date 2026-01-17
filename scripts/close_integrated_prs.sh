@@ -36,13 +36,7 @@ echo ""
 
 # PR 列表：PR号 作者 标题
 declare -A PRS=(
-    ["395"]="ThanhNguyxn|fix: convert enum values to strings for Gemini compatibility"
-    ["394"]="ThanhNguyxn|feat: add account_email field to API monitoring logs"
-    ["371"]="AmbitionsXXXV|chore: update package-lock.json and enhance ApiProxy styles"
-    ["354"]="Mag1cFall|perf: concurrent quota refresh for all accounts"
-    ["353"]="Mag1cFall|refactor(ui): improve API proxy page visual design"
-    ["321"]="Stranmor|fix: increase response body limit to 10MB"
-    ["311"]="Jint8888|feat: Add audio transcription API (部分集成)"
+    ["769"]="i-smile|Fix: Suppress console flashing on Windows & update Auth UI status"
 )
 
 # 检查 GitHub CLI 是否已安装
